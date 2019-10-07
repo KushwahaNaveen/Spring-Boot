@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition"
+		template="/WEB-INF/view/tiles/layouts/defaultBase.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/view/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/view/tiles/template/defaultFooter.jsp" />
+	</definition>
+	<definition name="base-without-menu"
+		template="/WEB-INF/view/tiles/layouts/baseWithoutMenu.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/view/tiles/template/loginHeader.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/view/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="Welcome" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/home.jsp" />
+	</definition>
+
+
+
+
+
+	<definition name="setting" extends="base-definition">
+		<put-attribute name="title" value="Setting" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/setting.jsp" />
+	</definition>
+
+
+	<definition name="showtestpage" extends="base-without-menu">
+		<put-attribute name="title" value="Test" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/showtestpage.jsp" />
+	</definition>
+
+	<definition name="loginForm" extends="base-without-menu">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/loginForm.jsp" />
+	</definition>
+
+	<definition name="login" extends="base-without-menu">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/login.jsp" />
+	</definition>
+	
+	<definition name="next" extends="base-definition">
+		<put-attribute name="title" value="Next" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/next.jsp" />
+	</definition>
+	
+	<definition name="editor" extends="base-definition">
+		<put-attribute name="title" value="Next" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/editor.jsp" />
+	</definition>
+
+	<definition name="activityLogging"
+		extends="base-without-menu">
+		<put-attribute name="title" value="Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/activityLogging.jsp" />
+	</definition>
+
+	<definition name="stopCard" extends="base-without-menu">
+		<put-attribute name="title" value="Stop Card" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/stopCard.jsp" />
+	</definition>
+
+	<definition name="selectReason" extends="base-without-menu">
+		<put-attribute name="title" value="Select Reason" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/selectReason.jsp" />
+	</definition>
+
+	<definition name="unstopCard" extends="base-without-menu">
+		<put-attribute name="title" value="Unstop Card" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/unstopCard.jsp" />
+	</definition>
+
+	<definition name="pgResponse" extends="base-without-menu">
+		<put-attribute name="title" value="Unstop Card" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/pgResponse.jsp" />
+	</definition>
+
+	<definition name="ajaxLayout"
+		template="/WEB-INF/view/tiles/layouts/ajaxLayout.jsp">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/tiles/layouts/ajax.jsp" />
+	</definition>
+
+	<definition name="hostedCheckout" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/hostedCheckout.jsp" />
+	</definition>
+
+
+	<definition name="error" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/error.jsp" />
+	</definition>
+
+	<definition name="receipt" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/receipt.jsp" />
+	</definition>
+
+	<definition name="cardreport" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/cardreport.jsp" />
+	</definition>
+	<definition name="pushnotification"
+		extends="base-definition">
+		<put-attribute name="title" value="Notification" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/pushnotification.jsp" />
+	</definition>
+	<definition name="userstatus" extends="base-definition">
+		
+		<put-attribute name="title" value="UserStatus" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/userstatus.jsp" />
+	</definition>
+	<definition name="useraudit" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/useraudit.jsp" />
+	</definition>
+	<definition name="userdetail" extends="base-definition">
+		<put-attribute name="title" value="UserDetail" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/userdetail.jsp" />
+	</definition>
+	<definition name="useractivity" extends="base-definition">
+		<put-attribute name="title" value="UserActivity" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/useractivity.jsp" />
+	</definition>
+	<definition name="accessdenied" extends="base-definition">
+		<put-attribute name="title" value="AccessDenied" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/accessDenied.jsp" />
+	</definition>
+	<definition name="timeout" extends="base-definition">
+		<put-attribute name="title" value="TimeOut" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/timeout.jsp" />
+	</definition>
+	<definition name="deregisteruser" extends="base-definition">
+		<put-attribute name="title" value="DeRegisterUser" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/deregisteruser.jsp" />
+	</definition>
+	<definition name="adminactionlogreport"
+		extends="base-definition">
+		<put-attribute name="title" value="AdminAuditLogReport" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/adminauditlog.jsp" />
+	</definition>
+	<definition name="changepassscr" extends="base-definition">
+		<put-attribute name="title" value="Change Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/changepassscr.jsp" />
+	</definition>
+	<definition name="registereduser" extends="base-definition">
+		<put-attribute name="title" value="Registered User" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/registereduser.jsp" />
+	</definition>
+	<definition name="pgtransactionreport"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="PG Transaction Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/pgtransactionreport.jsp" />
+	</definition>
+	<definition name="relodablecardreport"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Reloadable Card Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/view/pages/relodablecardreport.jsp" />
+	</definition>
+
+	<!--*********************Static Pageg************************** -->
+	<definition name="faq" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/faq.jsp" />
+	</definition>
+	<definition name="tac" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/tac.jsp" />
+	</definition>
+	<definition name="offers" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/offers.jsp" />
+	</definition>
+	<definition name="contact" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/contact.jsp" />
+	</definition>
+	<definition name="cardBenefits" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/cardBenefits.jsp" />
+	</definition>
+	<definition name="importantinfo" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/importantinfo.jsp" />
+	</definition>
+	<definition name="pgError" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/pgError.jsp" />
+	</definition>
+	<definition name="default" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/default.jsp" />
+	</definition>
+	<definition name="404" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/404.jsp" />
+	</definition>
+	<definition name="405" extends="ajaxLayout">
+		<put-attribute name="ajaxbody"
+			value="/WEB-INF/view/pages/405.jsp" />
+	</definition>
+</tiles-definitions>
